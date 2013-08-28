@@ -48,7 +48,7 @@
               <a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example
           </h2>
           <div id='areaspline-container' ng-controller="MainCtrl">
-              <areaspline data='data' width='640' height='100'></areaspline><br />
+              <areaspline data='data' width='640'></areaspline><br />
               <button ng-click='randomize()'>Randomize</button>
               <span ng-bind="data"></span>
 
@@ -82,34 +82,47 @@
     height="{float}"&gt;
 &lt;/div&gt;</code></pre>
 
-<h4>
-<a name="parameters" class="anchor" href="#parameters"><span class="octicon octicon-link"></span></a>Parameters</h4>
+        <h4>
+            <a name="parameters" class="anchor" href="#parameters"><span class="octicon octicon-link"></span></a>Parameters
+        </h4>
 
-<table>
-<thead><tr>
-<th>Param</th>
-<th>Type</th>
-<th>Details</th>
-</tr></thead>
-<tbody>
-<tr>
-<td>data</td>
-<td>string</td>
-<td>Angular expression from which to get the data. Expects an array of numbers, e.g. <code>[ 1, 2, 3, ...]</code>
-</td>
-</tr>
-<tr>
-<td>width</td>
-<td>integer</td>
-<td>Gets passed directly to the SVG</td>
-</tr>
-<tr>
-<td>height</td>
-<td>integer</td>
-<td>Gets passed directly to the SVG</td>
-</tr>
-</tbody>
-</table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Param</th>
+                    <th>Type</th>
+                    <th>Required</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>data</td>
+                    <td>string</td>
+                    <td>yes</td>
+                    <td>Angular expression from which to get the data. Expects an array of numbers, e.g. <code>[ 1, 2, 3, ...]</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>transition</td>
+                    <td>boolean</td>
+                    <td>no</td>
+                    <td>If true, an animated transition will be performed when the chart's data is updated.</td>
+                </tr>
+                <tr>
+                    <td>width</td>
+                    <td>integer</td>
+                    <td>no</td>
+                    <td>Gets passed directly to the SVG</td>
+                </tr>
+                <tr>
+                    <td>height</td>
+                    <td>integer</td>
+                    <td>no</td>
+                    <td>Gets passed directly to the SVG</td>
+                </tr>
+            </tbody>
+        </table>
       </section>
     </div>
 
