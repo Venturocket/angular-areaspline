@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple areaspline chart for AngularJS</title>
+    <style>
+
+	    path {
+		    fill: blue;
+	    }
+    </style>
+</head>
+<body id='ng-app' ng-app="ExampleApp">
+
+	<div id='areaspline-container' ng-controller="MainCtrl">
+	    <areaspline data='data' width='500' height='100'></areaspline><br />
+		<button ng-click='randomize()'>Randomize</button>
+		<span ng-bind="data"></span>
+
+    </div>
+	<script src="app/components/d3/d3.js"></script>
+	<script src="app/components/angular/angular.js"></script>
+	<script src="app/components/angular-d3/dist/angular-d3.js"></script>
+    <script src="src/angular-areaspline.js"></script>
+    <script>
+	    var doc = null;
+        angular.module('ExampleApp', ['vr.directives.areaspline'])
+			.controller('MainCtrl', ['$scope', '$document', function($scope, $document) {
+			    $scope.data = [0,0,1,3,1,0,0];
+			    $scope.randomize = function() {
+					var randLength = Math.ceil(Math.random()*9)+1;
+				    var newData = [];
+				    for(var i=0;i<randLength;i++) {
+					    newData[i] = Math.ceil(Math.random()*20);
+				    }
+				    $scope.data = newData;
+			    };
+			}]);
+    </script>
+</body>
+</html>

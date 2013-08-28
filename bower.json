@@ -1,0 +1,19 @@
+{
+    "name": "angular-areaspline",
+    "version": "0.0.1",
+    "main": "./build/angular-area-spline.min.js",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "components"
+    ],
+    "dependencies": {
+        "angular": "~1.0.7",
+		"d3": "mbostock/d3#~3.3.1",
+		"angular-d3": "beefsack/angular-d3"
+    },
+    "devDependencies": {
+        "angular-mocks": "*",
+		"angular-scenario": "*"
+    }
+}
