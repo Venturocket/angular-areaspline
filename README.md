@@ -1,4 +1,4 @@
-# angular-areaspline
+# angular-areaspline [![Build Status](https://secure.travis-ci.org/Venturocket/angular-areaspline.png?branch=master)](http://travis-ci.org/Venturocket/angular-areaspline)
 Simple areaspline chart directive. Uses d3's area chart.
 
 ## Usage
