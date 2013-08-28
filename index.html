@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Angular-areaspline : Simple areaspline chart directive. Uses d3's area chart." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Angular-areaspline</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Venturocket/angular-areaspline">View on GitHub</a>
+
+          <h1 id="project_title">Angular-areaspline</h1>
+          <h2 id="project_tagline">Simple areaspline chart directive. Uses d3's area chart.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/Venturocket/angular-areaspline/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/Venturocket/angular-areaspline/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<h4>
+<a name="markup" class="anchor" href="#markup"><span class="octicon octicon-link"></span></a>Markup</h4>
+
+<p>As an element:</p>
+
+<pre><code>&lt;areaspline
+    data="{string}"
+    width="{float}"
+    height="{float}"&gt;
+&lt;/areaspline&gt;
+</code></pre>
+
+<p>As an attribute:</p>
+
+<pre><code>&lt;div
+    areaspline
+    data="{string}"
+    width="{float}"
+    height="{float}"&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h4>
+<a name="parameters" class="anchor" href="#parameters"><span class="octicon octicon-link"></span></a>Parameters</h4>
+
+<table>
+<thead><tr>
+<th>Param</th>
+<th>Type</th>
+<th>Details</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>string</td>
+<td>Angular expression from which to get the data. Expects an array of numbers, e.g. <code>[ 1, 2, 3, ...]</code>
+</td>
+</tr>
+<tr>
+<td>width</td>
+<td>integer</td>
+<td>Gets passed directly to the SVG</td>
+</tr>
+<tr>
+<td>height</td>
+<td>integer</td>
+<td>Gets passed directly to the SVG</td>
+</tr>
+</tbody>
+</table>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Angular-areaspline maintained by <a href="https://github.com/Venturocket">Venturocket</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-20652388-4");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
