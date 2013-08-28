@@ -22,9 +22,10 @@ As an attribute:
 ```
 
 #### Parameters
-|Param	|Type	|Details|
-|-------|-------|-------|
-|data	|string	|Angular expression from which to get the data. Expects an array of numbers, e.g. `[ 1, 2, 3, ...]` |
-|width	|integer|Gets passed directly to the SVG |
-|height	|integer|Gets passed directly to the SVG |
+|Param	|Type	|Required|Details|
+|-------|-------|--------|-------|
+|data	|string	|yes    |Angular expression from which to get the data. Expects an array of numbers, e.g. `[ 1, 2, 3, ...]` |
+|transition|boolean |no |If true, an animated transition will be performed when the chart's data is updated.|
+|width	|integer |no    |Gets passed directly to the SVG |
+|height	|integer |no    |Gets passed directly to the SVG |
 

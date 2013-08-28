@@ -1,6 +1,6 @@
 {
     "name": "angular-areaspline",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "main": "./build/angular-area-spline.min.js",
     "ignore": [
         "**/.*",
