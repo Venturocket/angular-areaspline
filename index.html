@@ -6,12 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="Angular-areaspline : Simple areaspline chart directive. Uses d3's area chart." />
 
+    <script src="javascripts/d3.js" type="text/javascript"></script>
+    <script src="javascripts/angular.js" type="text/javascript"></script>
+    <script src="javascripts/angular-d3.js" type="text/javascript"></script>
+
+    <script src="javascripts/angular-areaspline.js" type="text/javascript"></script>
+
+    <script src="javascripts/app.js" type="text/javascript"></script>
+
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <style>
+      path {
+          fill: blue;
+      }
+    </style>
 
     <title>Angular-areaspline</title>
   </head>
 
-  <body>
+  <body ng-app="ExampleApp">
 
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
@@ -19,7 +32,7 @@
           <a id="forkme_banner" href="https://github.com/Venturocket/angular-areaspline">View on GitHub</a>
 
           <h1 id="project_title">Angular-areaspline</h1>
-          <h2 id="project_tagline">Simple areaspline chart directive. Uses d3's area chart.</h2>
+          <h2 id="project_tagline">A simple areaspline chart directive using d3's area chart.</h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/Venturocket/angular-areaspline/zipball/master">Download this project as a .zip file</a>
@@ -31,30 +44,43 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
+          <h2>
+              <a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example
+          </h2>
+          <div id='areaspline-container' ng-controller="MainCtrl">
+              <areaspline data='data' width='640' height='100'></areaspline><br />
+              <button ng-click='randomize()'>Randomize</button>
+              <span ng-bind="data"></span>
+
+          </div>
+          
         <h2>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+            <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage
+        </h2>
 
-<h4>
-<a name="markup" class="anchor" href="#markup"><span class="octicon octicon-link"></span></a>Markup</h4>
+        <h4>
+            <a name="markup" class="anchor" href="#markup"><span class="octicon octicon-link"></span></a>Markup
+        </h4>
 
-<p>As an element:</p>
+        <p>As an element:</p>
 
-<pre><code>&lt;areaspline
+        <pre>
+<code>&lt;areaspline
     data="{string}"
     width="{float}"
     height="{float}"&gt;
 &lt;/areaspline&gt;
 </code></pre>
 
-<p>As an attribute:</p>
+        <p>As an attribute:</p>
 
-<pre><code>&lt;div
+        <pre>
+<code>&lt;div
     areaspline
     data="{string}"
     width="{float}"
     height="{float}"&gt;
-&lt;/div&gt;
-</code></pre>
+&lt;/div&gt;</code></pre>
 
 <h4>
 <a name="parameters" class="anchor" href="#parameters"><span class="octicon octicon-link"></span></a>Parameters</h4>

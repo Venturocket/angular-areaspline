@@ -1,0 +1,9 @@
+node_modules
+dist
+.tmp
+app/components
+npm-debug.log
+
+#IDE
+/.idea
+/*.iml
