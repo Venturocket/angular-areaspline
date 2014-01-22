@@ -3,7 +3,10 @@
 <head>
     <title>Simple areaspline chart for AngularJS</title>
     <style>
-
+		body, html {
+			padding: 0;
+			margin: 0;
+		}
 	    path {
 		    fill: blue;
 	    }
@@ -12,11 +15,15 @@
 <body id='ng-app' ng-app="ExampleApp">
 
 	<div id='areaspline-container' ng-controller="MainCtrl">
-	    <areaspline data='data' width='500'></areaspline><br />
+		<div style="width: {{ containerWidth }}; height: {{ containerHeight }};">
+            <areaspline data='data' transition="true"></areaspline>
+		</div>
 		<button ng-click='randomize()'>Randomize</button>
 		<span ng-bind="data"></span>
-
+		Container width: <input type="text" ng-model="containerWidth" ng-init="containerWidth = '100%'" ng-change="fireResizeEvent()" />
+		height: <input type="text" ng-model="containerHeight" ng-init="containerHeight = '300px'" ng-change="fireResizeEvent()" />
     </div>
+	<script src="app/components/jquery/jquery.js"></script>
 	<script src="app/components/d3/d3.js"></script>
 	<script src="app/components/angular/angular.js"></script>
 	<script src="app/components/angular-d3/dist/angular-d3.js"></script>
@@ -34,6 +41,10 @@
 				    }
 				    $scope.data = newData;
 			    };
+			    $scope.fireResizeEvent = function() {
+				    console.log('hmm');
+				    $scope.$broadcast('resizeAreaSpline');
+			    }
 			}]);
     </script>
 </body>

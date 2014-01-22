@@ -8,7 +8,8 @@ As an element:
 <areaspline
 	data="{string}"
 	width="{float}"
-	height="{float}">
+	height="{float}"
+	transition="{bool}">
 </areaspline>
 ```
 As an attribute:
@@ -17,7 +18,8 @@ As an attribute:
 	areaspline
 	data="{string}"
 	width="{float}"
-	height="{float}">
+	height="{float}"
+	transition="{bool}">
 </div>
 ```
 
@@ -25,7 +27,7 @@ As an attribute:
 |Param	|Type	|Required|Default|Details|
 |-------|-------|--------|-------|-------|
 |data	|string	|yes    |none |Angular expression from which to get the data. Expects an array of numbers, e.g. `[ 1, 2, 3, ...]` |
-|transition|boolean |no |false |If true, an animated transition will be performed when the chart's data is updated.|
-|width	|integer |no    |100 |Gets passed directly to the SVG |
-|height	|integer |no    |100 |Gets passed directly to the SVG |
+|transition|bool |no |false |If true, an animated transition will be performed when the chart's data is updated.|
+|width	|float |no    |'auto' |Gets passed directly to the SVG for sizing purposes. If not given, the width will resize when the window is resized or a 'resizeAreaSpline' event is fired. |
+|height	|float |no    |'auto' |Gets passed directly to the SVG for sizing purposes. If not given, the height will resize when the window is resized or a 'resizeAreaSpline' event is fired. |
 
